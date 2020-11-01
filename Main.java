@@ -19,8 +19,6 @@ public class Main {
                 break;
             } else if (choice == 1) {
                 addMatrices(scanner);
-                //We could make the scanner static instance variable. 
-                //Here, we are passing the scanner from main method to another method.
             } else if (choice == 2) {
                 multiplyMatricesConsonant(scanner);
             } else if (choice == 3) {
@@ -41,6 +39,7 @@ public class Main {
         int i = scanner.nextInt();
         int j = scanner.nextInt();
         double[][] firstMatrix = new double[i][j];
+        System.out.println("Enter matrix: ");
         for (int a = 0; a < i; a++){
             for (int b = 0; b < j; b++){
                 firstMatrix[a][b] = scanner.nextDouble();
@@ -54,6 +53,7 @@ public class Main {
         }
 
         double[][] secondMatrix = new double[m][n];
+        System.out.println("Enter matrix: ");
         for (int a = 0; a < m; a++){
             for (int b = 0; b < n; b++){
                 secondMatrix[a][b] = scanner.nextDouble();
@@ -61,6 +61,7 @@ public class Main {
         }
 
         double[][] additionMatrix = new double[m][n];
+        System.out.println("The resulting matrix is: ");
         for (int a = 0; a < m; a++){
             for (int b = 0; b < n; b++){
                 additionMatrix[a][b] = firstMatrix[a][b] + secondMatrix[a][b];
@@ -77,6 +78,7 @@ public class Main {
         int j = scanner.nextInt();
         double[][] firstMatrix = new double[i][j];
 
+        System.out.println("Enter matrix: ");
         for (int a = 0; a < i; a++){
             for (int b = 0; b < j; b++){
                 firstMatrix[a][b] = scanner.nextDouble();
@@ -498,6 +500,3 @@ public class Main {
         }
     }
 }
-
-
-
